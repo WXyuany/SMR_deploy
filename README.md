@@ -19,6 +19,14 @@ PYTHONPATH=. mjpython mujoco_e11/mujoco_deploy.py \
 
 在 MuJoCo 窗口中：`s` 对齐，`a` 播放/重播，`b` 阻尼，`x/y` 切换动作。动作结束后会用策略增益平滑回到首帧待机姿态。
 
+录制连续动作演示：
+
+```bash
+PYTHONPATH=. python mujoco_e11/record_demo.py --output videos/mujoco_walk_wave_demo.mp4
+```
+
+演示视频：[MuJoCo 连续动作](videos/mujoco_walk_wave_demo.mp4) · [真机部署](videos/real_robot_deployment.mp4)
+
 ## 真机
 
 先把机器人吊在吊架上，确认网卡为 `eth0`，并在机器人 PC2 上运行：
